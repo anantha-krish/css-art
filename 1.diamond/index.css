@@ -1,0 +1,68 @@
+body{
+  height: 100vh;
+  background-color: rgb(5, 81, 83);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/**
+* Here the approach is to make a container of 4 square boxes,
+* fill them with borders, make top left border of top left square as transparent
+* then rotate the container to 45 degree 
+*/
+
+.diamond{
+  position: relative;
+  height: 200px;
+  width: 200px;
+  transform: rotate(45deg)
+}
+
+span:nth-child(1){
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-top: 50px solid transparent;
+  border-left: 50px solid transparent;
+  border-right: 50px solid #20bc7d;
+  border-bottom: 50px solid #26c893;
+}
+
+span:nth-child(2){
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-left: 50px solid #55ddb9;
+  border-right: 50px solid #20bc7d;
+  border-bottom: 50px solid #26c893;
+  border-top: 50px solid #1fb67c;
+}
+
+span:nth-child(3){
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-left: 50px solid #55ddb9;
+  border-right: 50px solid #20bc7d;
+  border-bottom: 50px solid #26c893;
+  border-top: 50px solid #1fb67c;
+}
+
+span:nth-child(4){
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-left: 50px solid #55ddb9;
+  border-right: 50px solid #20bc7d;
+  border-bottom: 50px solid #26c893;
+  border-top: 50px solid #1fb67c;
+}
